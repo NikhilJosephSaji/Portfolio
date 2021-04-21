@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#ff3e00" />
+
+    <!---------------------------------------------------------------->
+    <!--              Begin Styles Declaration                      -->
+    <!---------------------------------------------------------------->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/w3.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Jolly+Lodger&family=Courgette&display=swap" rel="stylesheet">
+    <link href="css/barstyles.css" rel="stylesheet" />
+    <link href="css/aos_Ex.css" rel="stylesheet" />
+    <link href="css/mdb.min_Ex.css" rel="stylesheet" />
+    <!---------------------------------------------------------------->
+    <!--                End Styles Declaration                      -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--              Begin Script Declaration                      -->
+    <!---------------------------------------------------------------->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/lottie-player.js"></script>
+    <!---------------------------------------------------------------->
+    <!--                End Script Declaration                      -->
+    <!---------------------------------------------------------------->
+
+    <title>Nikhil Joseph Saji</title>
+    <link rel="icon" type="image/png" href="Images/titilepic.png" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#HeaderNav_Bar" data-bs-offset="80" tabindex="0">
+  <!------------------------------------------------------------------>
+<!--                       Begin LOading                          -->
+<!------------------------------------------------------------------>
+<div id="loader">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <div class="loader">
+                </div>
+                <h5 class="myprof-font" style="padding-left:40px; padding-top:60px;"><b>Loading....<b></h5>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------------------>
+<!--                         End Loading                          -->
+<!------------------------------------------------------------------>
+<!------------------------------------------------------------------>
+<!--                     Begin Error Modal                        -->
+<!------------------------------------------------------------------>
+<div id="NoDataModal" class="modal fade bd-example-modal-lg" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <span class="fs-5 text-white pt-2" role="status">Sorry No Data Available...!</span>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------------------>
+<!--                      End Error Modal                         -->
+<!------------------------------------------------------------------>
+<!------------------------------------------------------------------>
+<!--                  Begin LOading Modal                         -->
+<!------------------------------------------------------------------>
+<div id="ModalLoad" class="modal fade bd-example-modal-lg" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-light" style="width: 5rem; height: 5rem;" role="status"></div>
+                <span id="LoadingText" class="fs-5 text-white pt-4 px-4">Loading...</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------------------>
+<!--                    End LOading Modal                         -->
+<!------------------------------------------------------------------>
+<div id="findmeonmap" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">                        
+                        <div data-aos="zoom-in" data-aos-delay="100"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1963.5190414780602!2d76.31604302459901!3d10.177559957820144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDEwJzM5LjIiTiA3NsKwMTknMDAuNyJF!5e0!3m2!1sen!2sin!4v1618054061712!5m2!1sen!2sin" width="500" height="400" style="border:0;width:100%;" allowfullscreen="" loading="lazy"></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!---------------------------------------------------------------->
+    <!--                 Begin NavBar Section                       -->
+    <!---------------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top myprof-bg-custom " id="HeaderNav_Bar">
+        <div class="container-fluid ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                <img class="myprof-img" src="Images/Profpic.jpg" />
+                <label id="Name_Header" class="myprof-nav-font">Nikhil Joseph Saji</label>
+            </a>
+            <div class="collapse navbar-collapse myprof-nav-font" id="navbarToggler">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 fw-bold" role="tablist">
+                    <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!---------------------------------------------------------------->
+    <!--                   End NavBar Section                       -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--                  Begin Home Section                        -->
+    <!---------------------------------------------------------------->
+    <section id="home">
+        <div id="carouselCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators ">
+                <div class="d-none d-sm-block">
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+            </div>
+            <div class="carousel-inner ">
+                <div class="carousel-item active">
+                    <img src="Images/Bg1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-sm-block myprof-carosel-text">
+                        <h1 class="myprof-carosel-font">
+                            Hi , I'm Nikhil Joseph<br />
+                            Software Engineer
+                        </h1>
+                    </div>
+                    <div class="carousel-caption d-block d-sm-none myprof-carosel-text">
+                        <h6 class="myprof-carosel-font">
+                            Hi , I'm Nikhil Joseph<br />
+                            Software Engineer
+                        </h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/Bg2.jpg" class="d-block w-100 " alt="...">
+                    <div class="carousel-caption d-none d-sm-block myprof-carosel-text ">
+                        <h1 class="myprof-carosel-font">" My Primary Framework is . Net and <br />my experience so far has helped me to excel in IT "</h1>
+                    </div>
+                    <div class="carousel-caption d-block d-sm-none myprof-carosel-text ">
+                        <h6 class="myprof-carosel-font">" My Primary Framework is . Net and my experience so far has helped me to excel in IT "</h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/Bg3.jpg" class="d-block w-100 " alt="...">
+                    <div class="carousel-caption d-none d-sm-block myprof-carosel-text ">
+                        <h1 class="myprof-carosel-font">" I am invoative and love to learn <br />about the development happening in my feild "</h1>
+                    </div>
+                    <div class="carousel-caption d-block d-sm-none myprof-carosel-text ">
+                        <h6 class="myprof-carosel-font">" I am invoative and love to learn <br />about the development happening in my feild "</h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/Bg4.png" class="d-block w-100 " alt="...">
+                    <div class="carousel-caption d-none d-sm-block myprof-carosel-text ">
+                        <h1 class="myprof-carosel-font">" I want to enhance my skills and <br /> become a recognised software engineer "</h1>
+                    </div>
+                    <div class="carousel-caption d-block d-sm-none myprof-carosel-text ">
+                        <h6 class="myprof-carosel-font">" I want to enhance my skills and <br /> become a recognised software engineer "</h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/Bg5.jpg" class="d-block w-100 " alt="...">
+                    <div class="carousel-caption d-none d-sm-block myprof-carosel-text ">
+                        <h1 class="myprof-carosel-font">" Loves to watch Sci-Fictipon movies and Thrillers "</h1>
+                    </div>
+                    <div class="carousel-caption d-block d-sm-none myprof-carosel-text ">
+                        <h6 class="myprof-carosel-font">" Loves to watch Sci-Fictipon movies and Thrillers "</h6>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!---------------------------------------------------------------->
+    <!--                    End Home Section                        -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--                  Begin About Section                       -->
+    <!---------------------------------------------------------------->
+    <section id="about" class="myprof-bg py-lg-4 py-md-3 py-sm-3">
+        <div class="w3-content py-lg-5 py-md-4 py-sm-3" style="max-width: 1400px;">
+            <!-- The Grid -->
+            <div class="w3-row-padding">
+                <!-- Left Column -->
+                <div class="w3-third">
+                    <div class="w3-white w3-text-grey w3-card-4">
+                        <div class="w3-display-container">
+                            <img src="Images/Prof.jpg" style="width: 100%" alt="Avatar">
+                            <div class="w3-display-bottomleft w3-container w3-text-black">
+                                <h2>Nikhil Joseph Saji</h2>
+                            </div>
+                        </div>
+                        <div class="w3-container mt-3">
+                            <p><i class="fa fa-suitcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Software Enginer</p>
+                            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Kerala, INDIA</p>
+                            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>nikhilsaji97@mail.com</p>
+                            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+91-9895280784</p>
+                            <div class="px-4">
+                                <button class="rounded-pill btn" style="background-color: #009688">
+                                    <a class="text-white" onclick="Dwonload_Clik()"><i class="fa fa-download"></i>
+                                        Download CV
+                                    </a>
+                                </button>
+                            </div>
+                            <hr>
+
+                            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+                            <p>Malayalam</p>
+                            <div class="w3-light-grey w3-round-xlarge">
+                                <div class="w3-round-xlarge w3-teal" style="height: 24px; width: 100%"></div>
+                            </div>
+                            <p>English</p>
+                            <div class="w3-light-grey w3-round-xlarge">
+                                <div class="w3-round-xlarge w3-teal" style="height: 24px; width: 76%"></div>
+                            </div>
+                            <p>Tamil</p>
+                            <div class="w3-light-grey w3-round-xlarge">
+                                <div class="w3-round-xlarge w3-teal" style="height: 24px; width: 60%"></div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- End Left Column -->
+                </div>
+
+                <!-- Right Column -->
+                <div class="w3-twothird">
+                    <div class="w3-container w3-card w3-white w3-margin-bottom">
+                        <h2 class="w3-text-grey w3-padding-16 myprof-font"><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>About</h2>
+                        <div class="w3-container">
+                            <div class="w3-opacity pb-3">
+                                <h5>
+                                    <ul style="list-style-type: none">
+                                        <li class="lh-base">I live in kerala and work in Technopark as a Software Developer.</li>
+                                        <li class="lh-base">I’ve been a professional developer for more than 2 years.</li>
+                                        <li class="lh-base">I’ve mostly worked professionally with C#, WPF, ASP.NET Api and WinForm but also a little bit with ASP.NET MVC, C and C++.</li>
+                                        <li class="lh-base">Beside programming I am interested in sports (running, mountain biking, strength training) and Movies, especially Thriller (like Dark, Money Heist, etc).</li>
+                                        <li class="lh-base">I also like foreign languages and am currently putting a lot of effort into becoming fluent in English.</li>
+                                    </ul>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w3-container w3-card w3-white">
+                        <h2 class="w3-text-grey w3-padding-16 myprof-font"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal myprof-font"></i>Education</h2>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity">Adi Shankara Institute of Engineering and Technology, Kalady, Kerala</h5>
+                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014 - 2018</h6>
+                            <p>Bachelor of Technology</p>
+                            <hr>
+                        </div>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity">De Paul English Medium Higher Secondary School, Angamaly, Kerala</h5>
+                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - 2014</h6>
+                            <p>Higher Secondary</p>
+                            <hr>
+                        </div>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity">Holy Grace Academy, Mala</h5>
+                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 - 2012</h6>
+                            <p>Secondary School</p>
+                            <br>
+                        </div>
+                    </div>
+
+                    <!-- End Right Column -->
+                </div>
+
+                <!-- End Grid -->
+            </div>
+
+            <!-- End Page Container -->
+        </div>
+    </section>
+    <!---------------------------------------------------------------->
+    <!--                    End About Section                       -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--                  Begin Skill Section                       -->
+    <!---------------------------------------------------------------->
+    <section id="skills" class="carrersummary pb-5">
+        <div class="container">
+            <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="myprof-font text-center mt-5 mb-3">
+                        <p>
+                            Professional Skills
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-12 fs-5">
+                    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">C#</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                            <span class="progress-value">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">WPF</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                            <span class="progress-value">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">ASP .NET API</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                                            <span class="progress-value">70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">LINQ</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                            <span class="progress-value">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">SQL Server</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                            <span class="progress-value">75%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">ASP .NET MVC</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                            <span class="progress-value">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">ADO .NET</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                            <span class="progress-value">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">WCF</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                            <span class="progress-value">60%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">Windows Service</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                            <span class="progress-value">60%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">Win Form</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                            <span class="progress-value">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">Stored Procedure</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div>
+                                            <span class="progress-value">65%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">HTML</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                                            <span class="progress-value">70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">Crystal Report</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 55%;"></div>
+                                            <span class="progress-value">55%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">Entity Frame Work</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                            <span class="progress-value">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">CSS</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div>
+                                            <span class="progress-value">65%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">BootStrap</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                                            <span class="progress-value">70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">javaScript</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div>
+                                            <span class="progress-value">65%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">C</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                                            <span class="progress-value">50%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">C++</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                                            <span class="progress-value">50%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pt-2">
+                                    <div class="progress-container progress-primary">
+                                        <span class="progress-badge">MongoDB</span>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                                            <span class="progress-value">30%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------------------------->
+    <!--                   End Skill Section                        -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--            Begin Work Experience Section                   -->
+    <!---------------------------------------------------------------->
+    <section id="experience">
+        <div class="container pb-3 mb-3">
+            <div class="shadow-1-strong bg-white my-2 p-3">
+                <div class="work-experience-section">
+                    <h2 class="myprof-font text-center mt-5 mb-3">Work Experience</h2>
+                    <div class="timeline">
+                        <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
+                            <div class="timeline-head px-4 pt-3">
+                                <div class="h5">Software Engineer <span class="text-muted h6">at Inspirisys Solutions Limited – Trivandrum, Kerala</span></div>
+                            </div>
+                            <div class="timeline-body px-4 pb-4">
+                                <div class="text-muted text-small mb-3">July, 2020 - Present</div>
+                                <h6 class="lh-base">
+                                    Determines operational feasibility by evaluating analysis, problem definition, requirements, solution development, and proposed solutions. Develops software solutions by studying information needs, conferring with users, and studying systems flow, data usage, and work processes. Investigating and using new technologies where relevant.<br />
+                                    <b>Techologies Used</b> : C#, WPF, WCF, Window Services, SQL, ASP.NET MVC, ASP.NET API, JavaScript, Jquery, CSS, BootStrap, IIS, FileZila
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="200">
+                            <div class="timeline-head px-4 pt-3">
+                                <div class="h5">Software Developer <span class="text-muted h6">at Kapreign Pvt Limited – Ernakulam, Kerala</span></div>
+                            </div>
+                            <div class="timeline-body px-4 pb-4">
+                                <div class="text-muted text-small mb-3">Feb, 2020 – July, 2020</div>
+                                <h6 class="lh-base">
+                                    Improving system quality by identifying issues and common patterns, and developing standard operating procedures. Maintaining and improving existing codebases and peer review code changes<br />
+                                    <b>Techologies Used </b>: C#, WPF, SQL, Win-Form, Crystal Reports
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="400">
+                            <div class="timeline-head px-4 pt-3">
+                                <div class="h5">Software Developer <span class="text-muted h6">at Muthoot Mercantile Pvt Limited – Triavndrum, Kerala</span></div>
+                            </div>
+                            <div class="timeline-body px-4 pb-4">
+                                <div class="text-muted text-small mb-3">Dec, 2018 – Feb, 2020</div>
+                                <h6 class="lh-base">
+                                    Analyse user requirements write and test code, refining and rewriting it as necessary and communicate with any programmers involved in the project research, design and write new software programs. Optimize existing programs by analysing and identifying areas for modification.<br />
+                                    <b>Techologies Used </b>: C#, WPF, SQL, Crystal Report, ASP.NET API
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------------------------->
+    <!--                End Work Experience Section                 -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--                Begin Portfolio Section                     -->
+    <!---------------------------------------------------------------->
+    <section id="portfolio" class="portfolio">
+        <!------------------------------------------------------------------>
+<!--                Begin Portfolio in Partial                    -->
+<!------------------------------------------------------------------>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="myprof-font text-center">
+                <p>
+                    My Portfolio
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-app">App</li>
+                <li data-filter=".filter-web">Web</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row portfolio-container">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+                <img src="Images/Portfolio-1.jpg" class="portfolio-img" alt="">
+                <div class="portfolio-info">
+                    <h4>MuthootOne</h4>
+                    <p>App</p>
+                    <div class="portfolio-links">
+                        <a href="#" onclick="protfolio_Click('muthoot','Loading Project...')" title="MuthootOne"><i class="fa fa-plus"></i></a>
+                        <a href="#" onclick="protfolio_Click('muthootdetail','Loading Project Deatils...')"><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+                <img src="Images/Portfolio-1.jpg" class="portfolio-img" alt="">
+                <div class="portfolio-info">
+                    <h4>Web 3</h4>
+                    <p>Web</p>
+                    <div class="portfolio-links">
+                        <a href="Images/Bg1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                        <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+                <img src="Images/HarithaSmrithiThumb.png" class="portfolio-img" alt="">
+                <div class="portfolio-info">
+                    <h4>Haritha Smrithi</h4>
+                    <p>App</p>
+                    <div class="portfolio-links">
+                        <a href="#" onclick="protfolio_Click('harithasmrithi','Loading Project...')" title="HarithaSmrithi"><i class="fa fa-plus"></i></a>
+                        <a href="#" onclick="protfolio_Click('harithasmrithidetail','Loading Project Deatils...')"><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+                <img src="Images/GCQMS.png" class="portfolio-img" alt="">
+                <div class="portfolio-info">
+                    <h4>GCQMS</h4>
+                    <p>App</p>
+                    <div class="portfolio-links">
+                        <a href="#" onclick="protfolio_Click('gcqms','Loading Project...')" title="GCQMS"><i class="fa fa-plus"></i></a>
+                        <a href="#" onclick="protfolio_Click('gcqmsdetail','Loading Project Deatils...')"><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+                <img src="Images/SIB.jpg" class="portfolio-img" alt="">
+                <div class="portfolio-info">
+                    <h4>SIB CDK</h4>
+                    <p>App</p>
+                    <div class="portfolio-links">
+                        <a href="#" onclick="protfolio_Click('cdkplus','Loading Project...')" title="HarithaSmrithi"><i class="fa fa-plus"></i></a>
+                        <a href="#" onclick="protfolio_Click('cdkplusdetail','Loading Project Deatils...')"><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!------------------------------------------------------------------>
+<!--                End Portfolio in Partial                      -->
+<!------------------------------------------------------------------>
+<!------------------------------------------------------------------>
+<!--                Begin Minor Details Modal                     -->
+<!------------------------------------------------------------------>
+<div id="muthoot" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid modal-img" src="Images/portfolio-1.jpg" alt="">
+                <h4 class="modal-title pt-2 fw-bold">MuthootOne</h4>
+                <p>
+                    MuthootOne is a Destoktop Application , which is desgined and devevloped in WPF and Web API.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="harithasmrithi" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid modal-img" src="Images/HarithaSmrithi.png" alt="">
+                <h4 class="modal-title pt-2 fw-bold">Haritha Smrithi</h4>
+                <p>
+                    Haritha Smrithi is Desktop Application which is Desgined and Developed in WinForm.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cdkplus" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid modal-img" src="Images/SIB.jpg" alt="">
+                <h4 class="modal-title pt-2 fw-bold">SIB Cheque Deposit and Passbook Print Kiosk</h4>
+                <p>
+                    SIB CDK is a Desktop Application Which is Designed and Developed in WPF and WCF
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="gcqms" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid modal-img" src="Images/GCQMS.png" alt="">
+                <h4 class="modal-title pt-2 fw-bold">Gesture Control Queue Managment System</h4>
+                <p>
+                    GCQMS is a Desktop Application Which is Designed and Developed in WPF.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------------------>
+<!--                  End Minor Details Modal                     -->
+<!------------------------------------------------------------------>
+<!------------------------------------------------------------------>
+<!--                    Begin Detailed Modal                      -->
+<!------------------------------------------------------------------>
+<div id="muthootdetail" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div id="muthootcarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#muthootcarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#muthootcarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#muthootcarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="Images/portfolio-1.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Images/portfolio-1.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Images/portfolio-1.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div style="overflow-y:scroll;height:400px;">
+                                <h3>Project information</h3>
+                                <ul>
+                                    <li><b>Name</b> : MuthootOne</li>
+                                    <li><b>Category</b> : Desktop Application</li>
+                                    <li><b>Client</b> : Muthoot Mercantile Pvt Limited</li>
+                                    <li><b>Duration</b>: Dec 2018 – Feb 2020</li>
+                                    <li><b>Technology / Tools </b> : WPF, Web Api , C#, Visual Studio 2013, SQL Server 2014, SAP Crystal Reports, Prism MVVVM</li>
+                                    <li><b>Responsibilities</b> : Actively involved in design , development ,Software Testing, Client Support and Defect fixing</li>
+                                </ul>
+                                <p>
+                                    <b>MuthootOne</b> is a banking software which includes Admin Settings, Gold Loan, Fixed
+                                    Deposit and Accounts modules. I worked in creating and handling modules Savings
+                                    Account, Hardware, Subordinated Debt, Debenture and Human Resources
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="harithasmrithidetail" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div id="harithasmrithicarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#harithasmrithicarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#harithasmrithicarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#harithasmrithicarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="Images/HarithaSmrithi.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Images/HarithaSmrithi1.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Images/HarithaSmrithi2.png" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div style="overflow-y:scroll;height:400px;">
+                                <h3>Project information</h3>
+                                <ul>
+                                    <li><b>Name</b> : Haritha Smrithi</li>
+                                    <li><b>Category</b> : Desktop Application</li>
+                                    <li><b>Client</b> : Krishibavan </li>
+                                    <li><b>Duration</b>: Feb 2020 – July 2020</li>
+                                    <li><b>Technology / Tools </b> : WinForm, C#, SQL Server 2014, SAP Crystal Reports, Visual Studio 2015</li>
+                                    <li><b>Responsibilities</b> : Actively involved in design and development </li>
+                                </ul>
+                                <p>
+                                    <b>Haritha Smrithi </b> is a trading software that can be
+                                    used to examine the sales department of a company. It is used to store
+                                    all data of the trading activities that include buying and selling
+                                    of raw materials from customers to the merchants.
+                                    This also helps in analyzing all the data weekly, monthly as needed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cdkplusdetail" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div id="cdkpluscarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#cdkpluscarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#cdkpluscarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#cdkpluscarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="Images/SIB.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Images/SIB1.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Images/SIB2.png" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div style="overflow-y:scroll;height:400px;">
+                                <h3>Project information</h3>
+                                <ul>
+                                    <li><b>Name</b> : CDK PLUS</li>
+                                    <li><b>Category</b> : Desktop Application</li>
+                                    <li><b>Client</b> : South Indain Bank and City Bank </li>
+                                    <li><b>Duration</b>: July 2020 – March 2021</li>
+                                    <li><b>Technology / Tools </b> : WPF, WCF, C# , SQL , SAP Crystal Report, Visual Studio 2012</li>
+                                    <li><b>Responsibilities</b> : Actively involved in design, development and defect fixing </li>
+                                </ul>
+                                <p>
+                                    The Cheque Depositing & Passbook printing kiosk (<b>CDK_Plus</b>) is an
+                                    automated solution for the Banks’ customers to deposit their cheque and print their passbook 24 x 7,
+                                    without the help of any bank officials.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="gcqmsdetail" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div id="gcqmsdetailcarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#gcqmsdetailcarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#gcqmsdetailcarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#gcqmsdetailcarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="Images/GCQMS.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Images/GCQMS1.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Images/GCQMS2.png" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div style="overflow-y:scroll;height:400px;">
+                                <h3>Project information</h3>
+                                <ul>
+                                    <li><b>Name</b> : GCQMS</li>
+                                    <li><b>Category</b>b : Desktop Application</li>
+                                    <li><b>Client</b> :  Corporation Bank and Torrent Power </li>
+                                    <li><b>Duration</b>: July 2020 – March 2021</li>
+                                    <li><b>Technology / Tools </b> : WPF, C# , SQL , SAP Crystal Report, Visual Studio 2019</li>
+                                    <li><b>Responsibilities</b> : Actively involved in design and development.</li>
+                                </ul>
+                                <p>
+                                    <b>GCQMS</b> (Gesture Control Queue Management system) is used to 
+                                    control queues, decrease customer waiting time
+                                    and improves services smartly and quickly moreover this application 
+                                    can work with gesture to have the token.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------------------>
+<!--                  End Detailed Modal                          -->
+<!------------------------------------------------------------------>
+    </section>
+    <!---------------------------------------------------------------->
+    <!--                End Portfolio Section                       -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--                Begin Counter Section                       -->
+    <!---------------------------------------------------------------->
+    <section class="site-section section-counters text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <p class="counter start text-white" data-to="3" data-speed="2000">0</p>
+                    <h4>Years Experience</h4>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <p class="counter start text-white" data-to="6" data-speed="2000">0</p>
+                    <h4>Projects Delivered</h4>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <p id="infinity" class="counter text-white" data-from="0" data-to="1" data-speed="1000">0</p>
+                    <h4>Seconds on this site!</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------------------------->
+    <!--                  End Counter Section                       -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--                Begin Contact Section                       -->
+    <!---------------------------------------------------------------->
+    <section id="contact" class="pt-3 pb-4 myprof-contact-section text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class=" myprof-font pb-4 text-center pt-5">Contact Me</h3>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact-box">
+                        <form action="https://formspree.io/f/xleoqkve" method="POST">
+                            <div class="form-group p-1">
+                                <input type="text" class="form-control form-control-lg" required placeholder="Name Here" name="name" aria-label=".form-control-lg ">
+                            </div>
+                            <div class="form-group p-1">
+                                <input type="email" class="form-control form-control-lg" required placeholder="Email Here" name="_replyto" aria-label=".form-control-lg ">
+                            </div>
+                            <div class="form-group p-1">
+                                <input type="number" class="form-control form-control-lg" required placeholder="Contact Number Here" name="contact" aria-label=".form-control-lg ">
+                            </div>
+                            <div class="form-group p-1">
+                                <textarea class="form-control form-control-lg" required rows="5" placeholder="Message" name="message" aria-label=".form-control-lg "></textarea>
+                            </div>
+                            <div class="form-group text-center p-3">
+                                <button class="rounded-pill btn btn-warning fw-bold" type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="address-box text-center text-md-left pl-lg-5 pt-lg-5 mt-lg-5">
+                        <h6>
+                            <strong>Nikhil Joseph Saji</strong><br>
+                            Chirackal Manavalan, (House)<br>
+                            Ernakulam, Kerala<br>
+                            PIN : 683579<br>
+                            India<br>
+                            Call : <a class="text-decoration-none text-white " href="tel:+91-9895280784">+91-9895280784</a><br>
+                            Mail : <a class="text-decoration-none text-white " href="mailto:nikhilsaji97@gmail.com">nikhilsaji97@gmail.com</a>
+                        </h6>
+                        <button class="rounded-pill btn btn-light fw-bold" onclick="protfolio_Click('findmeonmap','Loading Map Location...')">Find on Map</button>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 d-flex justify-content-center p-1 pt-lg-5">
+                    <div class="vdplayer">
+                        <lottie-player autoplay="true" loop="" src="https://assets2.lottiefiles.com/packages/lf20_n9ryrmts.json" id="ynqcj" speed="1" class="lottieanimation" background="transparent" style="width: 200px; height: 200px;"></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------------------------->
+    <!--                  End Contact Section                       -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--                Begin Footer Section                        -->
+    <!---------------------------------------------------------------->
+    <footer class="myprof-bg-custom pt-3 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4 text-center pt-2">
+                    <p class="text-white">Copyright &copy; 2020 - 2021  Nikhil Joseph Saji</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="text-center">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-link"><a class="fa fa-facebook" href="https://www.facebook.com/NikhilJosephSaji"></a></li>
+                            <li class="nav-link"><a class="fa fa-youtube" href="https://www.youtube.com/channel/UC3MZlCcsyenKs7ksewIbAjQ"></a></li>
+                            <li class="nav-link"><a class="fa fa-linkedin" href="https://www.linkedin.com/in/nikhil-joseph-saji-8b1553170?originalSubdomain=in"></a></li>
+                            <li class="nav-link"><a class="fa fa-instagram" href="https://www.instagram.com/nikhil.joseph.saji/"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!---------------------------------------------------------------->
+    <!--                Begin Footer Section                        -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--                    BeginLottie-Payer                       -->
+    <!---------------------------------------------------------------->
+    <lottie-player autoplay="true" loop="" src="https://assets8.lottiefiles.com/private_files/lf30_irb2v6ie.json" id="2uho1" speed="1" class="lottieanimation" background="transparent" style="background: transparent; position: fixed; left: -30px; right: 0; width: 125px; height: 50%; bottom: 0; z-index: 19;"></lottie-player>
+    <!---------------------------------------------------------------->
+    <!--                    End Lottie-Payer                        -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--              Begin Script Declaration                      -->
+    <!---------------------------------------------------------------->
+    <script src="js/MyProfileJavaScript.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.countTo.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/noframework.waypoints.js"></script>
+    <!---------------------------------------------------------------->
+    <!--                End Script Declaration                      -->
+    <!---------------------------------------------------------------->
+    <!---------------------------------------------------------------->
+    <!--               Start of Tawk.to Script                      -->
+    <!---------------------------------------------------------------->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/605246d4067c2605c0b9879f/1f10neeg6';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!---------------------------------------------------------------->
+    <!--                 End of Tawk.to Script                      -->
+    <!---------------------------------------------------------------->
+</body>
+</html>
