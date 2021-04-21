@@ -104,30 +104,30 @@ $(function () {
 
 /* ------- Begin Loading Screen for 5 Sec and Show Body ----------*/
 
-document.querySelector("#loader").style.visibility = "visible";
-document.querySelector("body").style.visibility = "hidden";
-setTimeout(function () {
-    document.querySelector("#loader").style.visibility = "hidden";
-    document.querySelector("body").style.visibility = "visible";
-}, 4000);
+//document.querySelector("#loader").style.visibility = "visible";
+//document.querySelector("body").style.visibility = "hidden";
+//setTimeout(function () {
+//    document.querySelector("#loader").style.visibility = "hidden";
+//    document.querySelector("body").style.visibility = "visible";
+//}, 4000);
 
 /* ------- End Loading Screen for 5 Sec and Show Body ----------*/
 
 /* ------- Begin Loading Screen until body loads compeletly ----------*/
 
-//document.onreadystatechange = function () {
-//    if (document.readyState !== "complete") {
-//        document.querySelector(
-//            "body").style.visibility = "hidden";
-//        document.querySelector(
-//            "#loader").style.visibility = "visible";
-//    } else {
-//        document.querySelector(
-//            "#loader").style.visibility = "hidden";
-//        document.querySelector(
-//            "body").style.visibility = "visible";
-//    }
-//};
+document.onreadystatechange = function () {
+    if (document.readyState !== "complete") {
+        document.querySelector(
+            "body").style.visibility = "hidden";
+        document.querySelector(
+            "#loader").style.visibility = "visible";
+    } else {
+        document.querySelector(
+            "#loader").style.visibility = "hidden";
+        document.querySelector(
+            "body").style.visibility = "visible";
+    }
+};
 
 /* ------- End Loading Screen until body loads compeletly ----------*/
 
