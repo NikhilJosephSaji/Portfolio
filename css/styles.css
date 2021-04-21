@@ -110,7 +110,7 @@ button.carousel-control-prev {
     color: red;
 }
 
-.carousel-item:before {
+#home .carousel-item:before {
     content: '';
     position: absolute;
     top: 0;
@@ -154,6 +154,11 @@ button.carousel-control-prev {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+
+#portfolio .d-block.w-100 {
+    height: 340px;
+}
+
 .portfolio .portfolio-item {
     margin-bottom: 30px;
 }
@@ -415,6 +420,12 @@ button.carousel-control-prev {
     }
 }
 
+@media (max-width: 991px) and (min-width:500px){
+    #portfolio .d-block.w-100 {
+        height: 280px;
+    }
+}
+
 @media (max-width:990px) and (min-width:780px) {
     .col-lg-4.col-md-4 {
         padding-top: 100px;
@@ -454,8 +465,15 @@ button.carousel-control-prev {
         padding-left: 35px;
         padding-right: 35px;
     }
+
     .portfolio-img {
         height: 240px;
         width: 100%;
+    }
+}
+
+@media (max-width: 499px) {
+    #portfolio .d-block.w-100 {
+        height: 200px;
     }
 }
