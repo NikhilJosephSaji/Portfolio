@@ -11,7 +11,7 @@ p, li {
     font-weight: normal;
 }
 
-  /*Custom Page Style*/
+/*Custom Page Style*/
 .myprof-font {
     font-family: 'Caveat', cursive;
     font-size: 37px;
@@ -95,6 +95,11 @@ button.carousel-control-prev {
     color: black;
 }
 
+.fa-github {
+    background: white;
+    color: black;
+}
+
 .fa-linkedin {
     background: #007bb5;
     color: white;
@@ -115,7 +120,7 @@ button.carousel-control-prev {
     background-color: rgba(0,0,0,0.2);
 }
 
- /*Timer Section*/
+/*Timer Section*/
 
 .section-counters {
     width: 100%;
@@ -154,7 +159,7 @@ button.carousel-control-prev {
 }
 
 .portfolio-img {
-    height: 210px;
+    height: 220px;
     width: 100%;
 }
 
@@ -334,7 +339,7 @@ button.carousel-control-prev {
 }
 
 
-   /*Modal Loader Style*/ 
+/*Modal Loader Style*/
 
 .bd-example-modal-lg .modal-dialog {
     display: table;
@@ -348,7 +353,7 @@ button.carousel-control-prev {
         border: none;
     }
 
-    /*loading animation style*/
+/*loading animation style*/
 
 .loader {
     border: 16px solid #f3f3f3;
@@ -396,7 +401,7 @@ button.carousel-control-prev {
     }
 }
 
-   /*Make Responsive*/
+/*Make Responsive*/
 
 @media (max-width:999px) {
     .col-lg-5 {
@@ -430,5 +435,27 @@ button.carousel-control-prev {
     section#about {
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+
+    .col-sm-4.col-xs-12 {
+        padding-top: 15px;
+    }
+}
+
+@media (max-width:767px) and (min-width:576px) {
+    .portfolio-img {
+        height: 150px;
+        width: 100%;
+    }
+}
+
+@media (max-width:575px) and (min-width:450px) {
+    .col-lg-4.col-md-6.col-sm-6.col-xs-6.portfolio-item {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .portfolio-img {
+        height: 240px;
+        width: 100%;
     }
 }
