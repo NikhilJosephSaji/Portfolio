@@ -53,6 +53,28 @@
 <!--                         End Loading                          -->
 <!------------------------------------------------------------------>
 <!------------------------------------------------------------------>
+<!--                     End information                          -->
+<!------------------------------------------------------------------>
+<div id="infomodal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="infomodaltext" class="d-flex justify-content-center"></p>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><span class="px-3">Ok</span></button>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------------------>
+<!--                     End information                          -->
+<!------------------------------------------------------------------>
+<!------------------------------------------------------------------>
 <!--                     Begin Error Modal                        -->
 <!------------------------------------------------------------------>
 <div id="NoDataModal" class="modal fade bd-example-modal-lg" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -1040,6 +1062,71 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="contact-box">
+                        <form id="contactmeform">
+                            <div class="form-group p-1">
+                                <input type="text" class="form-control form-control-lg" required placeholder="Name Here" name="Name" aria-label=".form-control-lg ">
+                            </div>
+                            <div class="form-group p-1">
+                                <input type="email" class="form-control form-control-lg" required placeholder="Email Here" name="Email" aria-label=".form-control-lg ">
+                            </div>
+                            <div class="form-group p-1">
+                                <input type="number" class="form-control form-control-lg" required placeholder="Contact Number Here" name="ContactNo" aria-label=".form-control-lg ">
+                            </div>
+                            <div class="form-group p-1">
+                                <textarea class="form-control form-control-lg" required rows="5" placeholder="Message" name="Message" aria-label=".form-control-lg "></textarea>
+                            </div>
+                            <div class="form-group text-center p-3">
+                                <input class="rounded-pill btn btn-warning fw-bold" type="submit" value="Send Message">
+                            </div>
+                        </form>
+                        <!-- <form action="https://formspree.io/f/xleoqkve" method="POST">
+                            <div class="form-group p-1">
+                                <input type="text" class="form-control form-control-lg" required placeholder="Name Here" name="name" aria-label=".form-control-lg ">
+                            </div>
+                            <div class="form-group p-1">
+                                <input type="email" class="form-control form-control-lg" required placeholder="Email Here" name="_replyto" aria-label=".form-control-lg ">
+                            </div>
+                            <div class="form-group p-1">
+                                <input type="number" class="form-control form-control-lg" required placeholder="Contact Number Here" name="contact" aria-label=".form-control-lg ">
+                            </div>
+                            <div class="form-group p-1">
+                                <textarea class="form-control form-control-lg" required rows="5" placeholder="Message" name="message" aria-label=".form-control-lg "></textarea>
+                            </div>
+                            <div class="form-group text-center p-3">
+                                <button class="rounded-pill btn btn-warning fw-bold" type="submit">Send Message</button>
+                            </div>
+                        </form>-->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="address-box text-center text-md-left pl-lg-5 pt-lg-5 mt-lg-5">
+                        <h6>
+                            <strong>Nikhil Joseph Saji</strong><br>
+                            Chirackal Manavalan, (House)<br>
+                            Ernakulam, Kerala<br>
+                            PIN : 683579<br>
+                            India<br>
+                            Call : <a class="text-decoration-none text-white " href="tel:+91-9895280784">+91-9895280784</a><br>
+                            Mail : <a class="text-decoration-none text-white " href="mailto:nikhilsaji97@gmail.com">nikhilsaji97@gmail.com</a>
+                        </h6>
+                        <button class="rounded-pill btn btn-light fw-bold" onclick="protfolio_Click('findmeonmap','Loading Map Location...')">Find on Map</button>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 d-flex justify-content-center p-1 pt-lg-5">
+                    <div class="vdplayer">
+                        <lottie-player autoplay="true" loop="" src="https://assets2.lottiefiles.com/packages/lf20_n9ryrmts.json" id="ynqcj" speed="1" class="lottieanimation" background="transparent" style="width: 200px; height: 200px;"></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class=" myprof-font pb-4 text-center pt-5">Contact Me</h3>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact-box">
                         <form action="https://formspree.io/f/xleoqkve" method="POST">
                             <div class="form-group p-1">
                                 <input type="text" class="form-control form-control-lg" required placeholder="Name Here" name="name" aria-label=".form-control-lg ">
@@ -1130,6 +1217,36 @@
     <script src="js/noframework.waypoints.js"></script>
     <!---------------------------------------------------------------->
     <!--                End Script Declaration                      -->
+    <!---------------------------------------------------------------->
+	<!---------------------------------------------------------------->
+    <!----------------------Contact Me Form Click--------------------->
+    <!---------------------------------------------------------------->
+    <script>
+        $("#contactmeform").submit((e) => {
+            document.getElementById("LoadingText").innerHTML = "Sending Mail...";
+            $('#ModalLoad').modal('show');
+            e.preventDefault()
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbzsYAS9Iux1cZeP49_kI7NOJsOXauh2u0HlFAhL/exec",
+                data: $("#contactmeform").serialize(),
+                method: "post",
+                success: function (response) {
+                    $('#ModalLoad').modal('hide');
+                    document.getElementById("infomodaltext").innerHTML = "Mail Send Sucessfully";
+                    $('#infomodal').modal('show');
+                    document.getElementById("contactmeform").reset();
+                    //window.location.href="https://google.com"
+                },
+                error: function (err) {
+                    $('#ModalLoad').modal('hide');
+                    document.getElementById("infomodaltext").innerHTML = "Mail Send Failed Due to Technical Issue";
+                    $('#infomodal').modal('show');
+                }
+            });
+        });
+    </script>
+    <!---------------------------------------------------------------->
+    <!----------------------End Contact Form-------------------------->
     <!---------------------------------------------------------------->
     <!---------------------------------------------------------------->
     <!--               Start of Tawk.to Script                      -->
