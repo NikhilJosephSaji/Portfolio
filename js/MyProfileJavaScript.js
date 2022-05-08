@@ -143,7 +143,7 @@ $('a[href*="#"]').on('click', function (e) {
     e.preventDefault();
 
     $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top - 80
+        scrollTop: $($(this).attr('href')).offset().top - 78
     }, 250, 'linear');
 });
 /////////////// #End OnScroll Offset with Animation(Delay)
