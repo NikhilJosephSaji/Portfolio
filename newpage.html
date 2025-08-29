@@ -81,6 +81,29 @@
   </div>
 
   <script>
+  // Simple client-side login prompt
+  const USERNAME = "admin";
+  const PASSWORD = "a7138aff-07fc";
+
+  function askLogin() {
+    const username = prompt("Enter username:");
+    const password = prompt("Enter password:");
+    
+    if (username === USERNAME && password === PASSWORD) {
+      return true;
+    } else {
+      alert("Incorrect username or password!");
+      return false;
+    }
+  }
+
+  if (!askLogin()) {
+    // Stop script execution if login fails
+    document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>Access Denied</h2>";
+    throw new Error("Access Denied");
+  }
+  
+  
     const imageFilenames = [
       "1.jpeg",
       "2.jpg",
