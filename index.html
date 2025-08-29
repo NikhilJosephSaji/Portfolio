@@ -1131,7 +1131,9 @@
             <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4 text-center pt-2">
-                    <p class="text-white">Copyright &copy; 2022 - 2023  Nikhil Joseph Saji</p>
+                    <p id="clickable" class="text-white">
+					  Copyright &copy; <span id="year-range"></span> Nikhil Joseph Saji
+					</p>
                 </div>
                 <div class="col-lg-4 text-center">
                     <div class="text-center">
@@ -1217,5 +1219,23 @@
     <!---------------------------------------------------------------->
     <!--                 End of Tawk.to Script                      -->
     <!---------------------------------------------------------------->
+	<script>
+	  const startYear = 2022;
+	  const currentYear = new Date().getFullYear();
+	  const yearRange = currentYear === startYear ? `${startYear}` : `${startYear} - ${currentYear}`;
+	  document.getElementById('year-range').textContent = yearRange;
+	  
+	  // Handle click count and redirection
+	  const paragraph = document.getElementById('clickable');
+	  let clickCount = 0;
+	  const maxClicks = 5;
+
+	  paragraph.addEventListener('click', () => {
+		clickCount++;
+		if (clickCount === maxClicks) {
+		  window.location.href = 'newpage.html'; // Change to your target URL
+		}
+	  });
+	</script>
 </body>
 </html>
