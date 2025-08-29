@@ -81,9 +81,22 @@
   </div>
 
   <script>
+  
+  function generatePassword() {
+  const prefix = "a7138aff-";
+  const now = new Date();
+
+  const MM = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+  const DD = String(now.getDate()).padStart(2, '0');
+  const YYYY = now.getFullYear();
+  const HH = String(now.getHours()).padStart(2, '0');
+
+  const password = `${prefix}${MM}${DD}${YYYY}${HH}`;
+  return password;
+}
   // Simple client-side login prompt
   const USERNAME = "admin";
-  const PASSWORD = "a7138aff-07fc";
+  const PASSWORD = generatePassword();
 
   function askLogin() {
     const username = prompt("Enter username:");
